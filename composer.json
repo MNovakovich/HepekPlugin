@@ -1,0 +1,19 @@
+{
+    "name": "marko/hepek-plugin",
+    "description": "Awesome starter plugin example",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "MNovakovic",
+            "email": "marko.novakovic@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\":"./inc"
+        }
+    }
+}
