@@ -5,30 +5,48 @@
 namespace Inc\Pages;
 use \Inc\Base\BaseController;
 use \Inc\Api\SettingsApi;
+use \Inc\Api\Callbacks\AdminCallbacks;
 
 class Admin extends BaseController
 {
     public $settings;
+    public $callbacks;
     public $pages = array();
     public $subpages = array();
 
-    public function __construct(){
-        $this->settings = new SettingsApi();
 
-        $this->pages = array(
+    public function register(){
+     
+       $this->settings = new SettingsApi();
+       $this->callbacks =  new AdminCallbacks();
+       $this->setPages();
+       $this->setSubpages();
+        //  * register Hepek page in dashboard
+      // add_action('admin_menu', array($this, 'add_admin_pages'));
 
-           array(
+       $this->settings->addPages( $this->pages )->withSubPage('Dashboard')->addSubPages( $this->subpages )->register();
+     // add_submenu_page($this->pages[0]['menu_slug'],'Onepage Theme Support', 'Theme Options', 'manage_options', 'markooo_onepage_theme', array($this, 'onepage_theme_support_page'));
+    }
+
+     public function setPages(){
+
+        $this->pages =  array(
+             array(
                 'page_title'=>'Hepek Plugin',
                 'menu_title'=>'Hepek',
                 'capability'=>'manage_options',
                 'menu_slug' => 'hepek_plugin',
-                'callback'  => function() {  echo '<h1>ovo radi</h1>'; },
+                'callback'  => array( $this->callbacks, 'adminDashboard' ),
                 'icon_url'  =>'dashicons-store',
                 'position'  =>25
 
             )
-
         );
+
+     }
+
+
+     public function setSubpages(){
 
         $this->subpages =  array(
 			array(
@@ -46,22 +64,18 @@ class Admin extends BaseController
 				'capability'=> 'manage_options',
 				'menu_slug' => 'hepek_taxonomies',
 				'callback'  => function(){ echo "<h1>Taxonomies Manager </h1>"; }
+            ),
+              array(
+				'parent_slug'=> 'hepek_plugin',
+				'page_title'=> 'Custom Widgets',
+				'menu_title'=> 'Widgets',
+				'capability'=> 'manage_options',
+				'menu_slug' => 'hepek_widgets',
+				'callback'  => function(){ echo "<h1>Widgets Manager </h1>"; }
 			)
 		);
-    }
 
-    public function register(){
-        //  * register Hepek page in dashboard
-      // add_action('admin_menu', array($this, 'add_admin_pages'));
-
-      $this->settings->addPages( $this->pages )->withSubPage('Dashboard')->addSubPages( $this->subpages )->register();
-     // add_submenu_page($this->pages[0]['menu_slug'],'Onepage Theme Support', 'Theme Options', 'manage_options', 'markooo_onepage_theme', array($this, 'onepage_theme_support_page'));
-    }
-
-    public function onepage_theme_settings_page(){
-
-     //   echo "radii";
-    }
+     }
 /* 
      // create Hepek page in dashborad
     public  function add_admin_pages(){
