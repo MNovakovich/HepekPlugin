@@ -13,9 +13,9 @@
      */
     public static function get_services(){
         return [
-            Base\Enqueue::class,
-            Base\SettingsLink::class,
             Pages\Admin::class,
+			Base\Enqueue::class,
+			Base\SettingsLink::class,
             Pages\Book::class,
         
         ];
