@@ -1,7 +1,7 @@
-
+<?php settings_errors(); ?>
 <div class="container--tabs">
     <h1>Admin page</h1>
-<?php settings_errors(); ?>
+
 	<section class="row">
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#tab-1">Manage Settings1</a></li>
@@ -13,10 +13,10 @@
 				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
 			
-					 <form action="options.php" method="post">
+			 <form action="options.php" method="post" class="manager-options-form">
             <?php 
             
-                settings_fields('hepek_options_group');
+                settings_fields('hepek_options_settings');
                 do_settings_sections('hepek_plugin');
                 submit_button();
             ?>

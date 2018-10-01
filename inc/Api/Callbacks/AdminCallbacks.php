@@ -15,16 +15,17 @@ class AdminCallbacks extends BaseController{
         return require_once(PLUGIN_PATH. '/templates/cpt.php');
 
     }
-
+/* 
     public function hepekOptionsGroup( $input ){
        return $input;
     }
 
 
+
     public function hepekAdminSection(){
       echo 'check this beautiful section';
     }
-
+ */
     public function hepekTExtExample(){
 
       $value =  esc_attr( get_option('text_example') );
@@ -35,5 +36,8 @@ class AdminCallbacks extends BaseController{
       $value =  esc_attr( get_option('first_name') );
       echo '<input type="text"  class="regular-text" name="first_name" value="'.$value.'"  placeholder="Write First Name" >';
     }
+
+
+
 
 }

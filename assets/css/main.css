@@ -1,56 +1,120 @@
-.nav-tabs{
-    float: left;
-    width: 100%;
-    margin: 0;
-    list-style-type: none;
-    border-bottom:1px solid #ddd;
+/* line 1, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs {
+  float: left;
+  width: 100%;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
 }
 
-.nav-tabs > li{
-     float: left;
-     margin-bottom: -1px;
+/* line 9, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
 }
 
+/* line 14, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
 .nav-tabs > li > a {
-    margin-right: 2px;
-    line-height: 1.5;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    float: left;
-    text-decoration: none; 
+  margin-right: 2px;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  float: left;
+  text-decoration: none;
 }
 
+/* line 24, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
 .nav-tabs > li > a:hover {
-    border-color: #eee #ddd;
-
+  border-color: #eee #ddd;
 }
 
+/* line 29, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-    color:#555;
-    cursor: default;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
-  
-
+  color: #555;
+  cursor: default;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
 }
 
-.tab-content .tab-pane{
-    float: left;
-    width: 100%;
-    display: none;
+/* line 41, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.tab-content .tab-pane {
+  float: left;
+  width: 100%;
+  display: none;
 }
 
-.tab-content .tab-pane.active{
-    display: block;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 1px 4px -2px rgba(0 0 0 0.15);
+/* line 47, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.tab-content .tab-pane.active {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  /*  box-shadow: 0 1px 4px -2px rgba(0 0 0.15); */
 }
 
-/*******************/
+/* line 54, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.ui-toggle th, .ui-toggle td {
+  padding-top: 5px;
+}
 
+/* line 68, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle {
+  margin: 0;
+  padding: 0;
+}
 
+/* line 25, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle input[type='checkbox'] {
+  display: none;
+}
+
+/* line 28, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle input[type='checkbox']:checked + label {
+  border-color: #009eea;
+  background: #009eea;
+  box-shadow: inset 0 0 0 10px #009eea;
+}
+
+/* line 33, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle input[type='checkbox']:checked + label > div {
+  margin-left: 20px;
+}
+
+/* line 39, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle label {
+  transition: all 200ms ease;
+  display: inline-block;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #8c8c8c;
+  box-shadow: inset 0 0 0 0 #009eea;
+  border: 2px solid #8c8c8c;
+  border-radius: 22px;
+  width: 40px;
+  height: 20px;
+}
+
+/* line 53, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle label div {
+  transition: all 200ms ease;
+  background: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* line 61, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/checkbox.scss */
+div.ui-toggle label:hover,
+div.ui-toggle label > div:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=../../assets/css/main.map */

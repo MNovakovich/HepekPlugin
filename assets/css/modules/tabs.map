@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../../src/sass/modules/tabs.css",
+	"sources": [
+		"../../../src/sass/modules/tabs.scss"
+	],
+	"sourcesContent": [
+		".nav-tabs{\n    float: left;\n    width: 100%;\n    margin: 0;\n    list-style-type: none;\n    border-bottom:1px solid #ddd;\n}\n\n.nav-tabs > li{\n     float: left;\n     margin-bottom: -1px;\n}\n\n.nav-tabs > li > a {\n    margin-right: 2px;\n    line-height: 1.5;\n    padding: 10px;\n    border: 1px solid transparent;\n    border-radius: 4px 4px 0 0;\n    float: left;\n    text-decoration: none; \n}\n\n.nav-tabs > li > a:hover {\n    border-color: #eee #ddd;\n\n}\n\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n    color:#555;\n    cursor: default;\n    background: #fff;\n    border: 1px solid #ddd;\n    border-bottom-color: transparent;\n  \n\n}\n\n.tab-content .tab-pane{\n    float: left;\n    width: 100%;\n    display: none;\n}\n\n.tab-content .tab-pane.active{\n    display: block;\n    padding: 10px;\n    background-color: #fff;\n   /*  box-shadow: 0 1px 4px -2px rgba(0 0 0.15); */\n}\n\n.ui-toggle th, .ui-toggle td {\n    padding-top: 5px;\n}"
+	],
+	"mappings": ";AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAE,IAAK;EACZ,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,CAAE;EACV,eAAe,EAAE,IAAK;EACtB,aAAa,EAAC,cAAe;CAChC;;;AAED,AAAY,SAAH,GAAG,EAAE,CAAA;EACT,KAAK,EAAE,IAAK;EACZ,aAAa,EAAE,IAAK;CACxB;;;AAED,AAAiB,SAAR,GAAG,EAAE,GAAG,CAAC,CAAC;EACf,YAAY,EAAE,GAAI;EAClB,WAAW,EAAE,GAAI;EACjB,OAAO,EAAE,IAAK;EACd,MAAM,EAAE,qBAAsB;EAC9B,aAAa,EAAE,WAAY;EAC3B,KAAK,EAAE,IAAK;EACZ,eAAe,EAAE,IAAK;CACzB;;;AAED,AAAkB,SAAT,GAAG,EAAE,GAAG,CAAC,AAAA,MAAM,CAAC;EACrB,YAAY,EAAE,SAAU;CAE3B;;;AAED,AAAwB,SAAf,GAAG,EAAE,AAAA,OAAO,GAAG,CAAC;AACzB,AAAyB,SAAhB,GAAG,EAAE,AAAA,OAAO,GAAG,CAAC,AAAA,MAAM;AAC/B,AAAyB,SAAhB,GAAG,EAAE,AAAA,OAAO,GAAG,CAAC,AAAA,MAAM,CAAC;EAC5B,KAAK,EAAC,IAAK;EACX,MAAM,EAAE,OAAQ;EAChB,UAAU,EAAE,IAAK;EACjB,MAAM,EAAE,cAAe;EACvB,mBAAmB,EAAE,WAAY;CAGpC;;;AAED,AAAa,YAAD,CAAC,SAAS,CAAA;EAClB,KAAK,EAAE,IAAK;EACZ,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,IAAK;CACjB;;;AAED,AAAsB,YAAV,CAAC,SAAS,AAAA,OAAO,CAAA;EACzB,OAAO,EAAE,KAAM;EACf,OAAO,EAAE,IAAK;EACd,gBAAgB,EAAE,IAAK;EACxB,iDAAiD;CACnD;;;AAED,AAAW,UAAD,CAAC,EAAE,EAAE,AAAW,UAAD,CAAC,EAAE,CAAC;EACzB,WAAW,EAAE,GAAI;CACpB",
+	"names": []
+}

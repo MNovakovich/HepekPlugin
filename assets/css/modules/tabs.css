@@ -1,0 +1,63 @@
+/* line 1, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs {
+  float: left;
+  width: 100%;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 9, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+/* line 14, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  float: left;
+  text-decoration: none;
+}
+
+/* line 24, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs > li > a:hover {
+  border-color: #eee #ddd;
+}
+
+/* line 29, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+/* line 41, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.tab-content .tab-pane {
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+/* line 47, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.tab-content .tab-pane.active {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  /*  box-shadow: 0 1px 4px -2px rgba(0 0 0.15); */
+}
+
+/* line 54, /var/www/html/celsius-network/wp-content/plugins/hepek-plugin/src/sass/modules/tabs.scss */
+.ui-toggle th, .ui-toggle td {
+  padding-top: 5px;
+}
+
+/*# sourceMappingURL=../../../assets/css/modules/tabs.map */
