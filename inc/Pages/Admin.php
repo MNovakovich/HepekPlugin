@@ -16,11 +16,15 @@ class Admin extends BaseController
 
 
     public function register(){
-     
+
        $this->settings = new SettingsApi();
        $this->callbacks =  new AdminCallbacks();
        $this->setPages();
        $this->setSubpages();
+
+       $this->setSettings();
+       $this->setSections();
+       $this->setFields();
         //  * register Hepek page in dashboard
       // add_action('admin_menu', array($this, 'add_admin_pages'));
 
@@ -55,7 +59,7 @@ class Admin extends BaseController
 				'menu_title'=> 'CPT',
 				'capability'=> 'manage_options',
 				'menu_slug' => 'hepek_cpt',
-				'callback'  => function(){ echo "<h1>CTP Manager </h1>"; }
+				'callback'  => array($this->callbacks, 'adminCpt')
             ),
             array(
 				'parent_slug'=> 'hepek_plugin',
@@ -75,6 +79,74 @@ class Admin extends BaseController
 			)
 		);
 
+     }
+
+     public function setSettings(){
+
+        $args = array(
+            array(
+                'option_group' => 'hepek_options_settings', 
+                'option_name' =>'text_example',
+                'callback'    => array($this->callbacks, 'hepekOptionsGroup')
+            ),
+            
+            array(
+                'option_group' => 'hepek_options_group', 
+                'option_name' =>'first_name'
+             )
+       );
+
+
+       $this->settings->setSettings( $args );
+     }
+
+
+     public function setSections(){
+          
+        $args = array(
+            array(
+                'id'       => 'hepek_admin_index', 
+                'title'    =>'Settings',
+                'callback' => array($this->callbacks, 'hepekAdminSection'),
+                'page'     =>'hepek_plugin'  // isto kao menu_slug 
+             )
+       );
+
+        $this->settings->setSections( $args );
+     }
+
+       public function setFields(){
+          
+        $args = array(
+            array(
+                'id'       => 'text_example', 
+                'title'    =>'Text Example',
+                'callback' => array($this->callbacks, 'hepekTExtExample'),
+                'page'     =>'hepek_plugin',  // isto kao menu_slug 
+                'section'  =>'hepek_admin_index',
+                'args'     => array(
+                    'label_for' =>'text_example',
+                     'class'    =>'example-class'
+                )
+
+            ),
+
+            array(
+                'id'       => 'first_name', 
+                'title'    =>'First Name',
+                'callback' => array($this->callbacks, 'hepekFirstName'),
+                'page'     =>'hepek_plugin',  // isto kao menu_slug 
+                'section'  =>'hepek_admin_index',
+                'args'     => array(
+                    'label_for' =>'first_name',
+                     'class'    =>'example-class'
+                )
+
+             )
+
+       );
+
+        $this->settings->setFields( $args );
      }
 /* 
      // create Hepek page in dashborad

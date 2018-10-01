@@ -1,0 +1,30 @@
+{
+  "name": "hepek-plugin",
+  "version": "1.0.0",
+  "description": "Starter Plugin Example",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MNovakovich/HepekPlugin.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "php",
+    "composer",
+    "javascript"
+  ],
+  "author": "Marko Novakovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MNovakovich/HepekPlugin/issues"
+  },
+  "homepage": "https://github.com/MNovakovich/HepekPlugin#readme"
+}
